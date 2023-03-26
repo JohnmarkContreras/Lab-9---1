@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            font-family: sans-serif;
+        }
+        #flex-1, #flex-2, #flex-3, #flex-4{
+            align-items: center;
+        }
+
+        #flex-1{
+            display: flex;
+        }
+        #flex-1 div:nth-of-type(1){
+            flex-basis: 200px;
+        }
+        #flex-1 div:nth-of-type(2){
+            flex-basis: 75px;
+        }
+
+        #flex-2{
+            display: flex;
+        }
+        #flex-2 div:nth-of-type(1){
+            flex-basis: 50px;
+        }
+        #flex-2 div:nth-of-type(2){
+            flex-basis: 100%;
+        }
+        #flex-2 div:nth-of-type(3){
+            flex-basis: 75px;
+        }
+
+        #flex-3{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        #flex-4{
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            border: 1px solid gray;
+        }
+
+    
+
+        /*Another task*/
+
+        .search-parent{
+            width: 500px;
+        }
+
+        .search{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 40px;
+            background-color: rgb(122, 95, 160);
+        }
+        .search a, .download{
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px;
+        }
+        .download button{
+            padding: 5px;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .search-bar{
+            padding: 0 10px 0 10px;
+        }
+        .search-bar input{
+            border-radius: 20px;
+            border: none;
+            padding: 5px 20px 5px 20px;
+            width: 300px;
+        }
+
+        /*Another task*/
+        .notif-parent{
+            position: relative;
+            width: 400px;
+        }
+        .notification{
+            position: absolute;
+            margin: 20px;
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        .notif-1{
+            position: relative;
+            padding:0 10px 0 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight:600;
+        }
+        .notif-1 .number p{
+            position: absolute;
+            border-radius: 40px;
+            color: #ffffff;
+            padding: 5px 15px 5px 15px;
+            background-color: rgb(63, 98, 224);
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="flex-1">
+        <div style="background-color: rgb(0, 137, 128);">200px</div>
+        <div style="background-color: rgb(255, 187, 198);">75px</div>
+    </div>
+
+    <br>
+
+    <div id="flex-2">
+        <div style="background-color: rgb(0, 137, 128);">item1</div>
+        <div style="background-color: rgb(255, 187, 198);">item2</div>
+        <div style="background-color: rgb(0, 137, 128);">item3</div>
+    </div>
+
+    <br>
+
+    <div id="flex-3">
+        <div style="background-color: rgb(255, 187, 198);">item1</div>
+        <div style="background-color: rgb(255, 187, 198);">item2</div>
+        <div style="background-color: rgb(255, 187, 198);">item3</div>
+        <div style="background-color: rgb(255, 187, 198);">item4</div>
+    </div>
+
+    <br>
+
+    <div id="flex-4">
+        <div style="background-color: rgb(255, 187, 198);">item1</div>
+        <div style="background-color: rgb(255, 187, 198);">item2</div>
+    </div>
+
+    <br>
+
+    <div class="search-parent">
+        <div class="search" id="flex-5">
+            <div class="home">
+                <a href="#">Home</a>
+            </div>
+
+            <div class="search-bar">
+                <input type="search" placeholder="Search">
+            </div>
+
+            <div class="download">
+                <button type="submit">Download</button>
+            </div>
+        </div>    
+    </div>
+
+    <div class="notif-parent">
+        <div class="notification">
+            <div class="notif-1" id="home">
+                <p>Home</p>
+                <div class="number">
+                    <p>14</p>
+                </div>
+            </div>
+            <div class="notif-1">
+                <p>Notifications</p>
+                <div class="number">
+                    <p>3</p>
+                </div>
+            </div>
+            <div class="notif-1">
+                <p>Messages</p>
+                <div class="number">
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
